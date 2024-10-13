@@ -8,8 +8,10 @@ public class Task3TestClass1 extends Task3TestClass {
         this.task3TestClass2 = new Task3TestClass2(id, id + '.' + id, name + ".testClass2");
     }
 
+    @Override
     public void sayHello() {
         System.out.println("Hello from object with name " + getName());
+        PrintStackUtil.printStackTrace("Task4TestClass1 sayHello", Thread.currentThread().getStackTrace());
         this.task3TestClass2.sayHello();
     }
 }

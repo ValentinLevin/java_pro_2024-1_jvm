@@ -10,9 +10,6 @@ public class Task3TestClass3 extends Task3TestClass{
 
     public void sayHello() {
         System.out.println("Hello from object with name " + getName());
-
-        for (StackTraceElement stackElement: Thread.currentThread().getStackTrace()) {
-            System.out.println(stackElement);
-        }
+        PrintStackUtil.printStackTrace("Task4TestClass3 sayHello", Thread.currentThread().getStackTrace());
     }
 }

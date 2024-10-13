@@ -13,6 +13,7 @@ public class Task3TestClass2 extends Task3TestClass{
 
     public void sayHello() {
         System.out.println("Hello from object with name " + getName());
+        PrintStackUtil.printStackTrace("Task4TestClass2 sayHello", Thread.currentThread().getStackTrace());
         task3TestClass3.sayHello();
     }
 }
